@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-flow: column wrap;
+  height: 587px;
+  counter-reset: brick;
+  border: 1px solid;
+  gap: 20px;
+}
+
+.item {
+  width: calc(33.33% - 13px);
+  background-color: #ccc;
+  border: 1px solid #333;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.item-large {
+  grid-column: span 2; /* Make large items span both columns */
+}
+
+.item-small {
+  grid-column: span 1; /* Small item occupies only one column */
+}
